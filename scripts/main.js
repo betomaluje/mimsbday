@@ -11,24 +11,11 @@ myImage.onclick = function() {
 	}
 }
 
-// Personalized welcome message code
+function validateCode() {
+  document.getElementById("hiddenMessage").style.display = 'block';
 
-var myButton = document.querySelector('button');
-var myHeading = document.querySelector('h1');
+  var code = document.getElementById("secretCodeText").value;
 
-function setUserName() {
-  var myName = prompt('Please enter your name.');
-  localStorage.setItem('name', myName);
-  myHeading.innerHTML = 'Mozilla is cool, ' + myName;
-}
+  document.getElementById("demo").innerHTML = "The code you enter is: " + code;
 
-if(!localStorage.getItem('name')) {
-  setUserName();
-} else {
-  var storedName = localStorage.getItem('name');
-  myHeading.innerHTML = 'Mozilla is cool, ' + storedName;
-}
-
-myButton.onclick = function() {
-  setUserName();
 }
