@@ -8,18 +8,22 @@
     <script src="scripts/main.js"></script>
   </head>
   <body>
-    <h1>You made it!</h1>
-    <img src="images/firefox-icon.png" alt="Happy Birthday!">
+    <div>
+      <h1>You made it!</h1>
+      <img id="myImg" onclick="switchImage()" src="images/firefox-icon.png" alt="Happy Birthday!">
 
-    <h2>Happy Birthday babe! This is your secret birthday website!</h2>
+      <h2>Happy Birthday babe! This is your secret birthday website!</h2>
 
-    <p>Enter the code to reveal the message</p>
-    <input type="text" id="secretCodeText" hint="Enter secret code">
+      <p>Enter the code to reveal the message</p>
+      <table border="0" align="center">
+        <tr>
+          <th><input type="text" id="secretCodeText" hint="Enter secret code"></th>
+          <th><button onclick="validateCode()">Enter code</button></th>
+      </table>
 
-    <div id="hiddenMessage" style="display:none">
-      <p id="demo">Secret message!</p>    
+      <div id="hiddenMessage" style="display:none">
+        <p id="demo">Secret message!</p>    
+      </div>
     </div>
-
-    <button onclick="validateCode()">Enter code</button>
   </body>
 </html>

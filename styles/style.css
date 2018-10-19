@@ -1,11 +1,20 @@
 html {
-  font-size: 10px;
+  font-size: 14px;
   font-family: 'Open Sans', sans-serif;
+  background-color: #00539F;
 }
-
 
 h1 {
   font-size: 60px;
+  text-align: center;
+  margin: 0;
+  padding: 20px 0;  
+  color: #00539F;
+  text-shadow: 3px 3px 1px black;
+}
+
+h2 {
+  font-size: 30px;
   text-align: center;
 }
 
@@ -15,26 +24,28 @@ p, li {
   letter-spacing: 1px;
 }
 
-
-html {
-  background-color: #00539F;
+button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }
 
 body {
-  width: 600px;
+  width: 100%;
   margin: 0 auto;
   background-color: #FFFFFF;
-  padding: 0 20px 20px 20px;
-}
-
-h1 {
-  margin: 0;
-  padding: 20px 0;  
-  color: #00539F;
-  text-shadow: 3px 3px 1px black;
+  padding: 0 20pt 20pt 20pt;
+  text-align: center;
 }
 
 img {
   display: block;
   margin: 0 auto;
+  width: 100pt;
+  height: 100pt;
 }
