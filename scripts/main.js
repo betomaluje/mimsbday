@@ -14,10 +14,12 @@ function switchImage() {
 function validateCode() {
   document.getElementById('hiddenMessage').style.display = 'block';
 
-  var code = document.getElementById('secretCodeText').value;
+  var code = document.getElementById('secretCodeText').value.toLocaleLowerCase();
   var resultText = document.getElementById('resultText');
 
-  if (code !== '' && code === 'caca') {
+  var realCode = 'caca';
+
+  if (code !== '' && code === realCode) {
     resultText.style.color = '#4CAF50';
     resultText.style.fontWeight = 'normal';
     resultText.innerHTML = 'Nice!';
