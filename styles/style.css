@@ -36,7 +36,6 @@ button {
 }
 
 body {
-  width: 100%;
   height: 100%;
   margin: 0 auto;
   background-color: #FFFFFF;
@@ -60,7 +59,6 @@ input[type=text] {
     border-radius: 4px;
     box-sizing: border-box;
 }
-
 
 /* Tablet Landscape */
 @media screen and (max-width: 1060px) {
