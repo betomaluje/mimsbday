@@ -15,11 +15,16 @@ function validateCode() {
   document.getElementById('hiddenMessage').style.display = 'block';
 
   var code = document.getElementById('secretCodeText').value;
+  var resultText = document.getElementById('resultText');
 
   if (code !== '' && code === 'caca') {
-    document.getElementById('demo').innerHTML = 'Nice!';
+    resultText.style.color = '#4CAF50';
+    resultText.style.fontWeight = 'normal';
+    resultText.innerHTML = 'Nice!';
   } else {
-    document.getElementById('demo').innerHTML = 'The code you enter is incorrect';
+    resultText.style.color = 'red';
+    resultText.style.fontWeight = 'bold';
+    resultText.innerHTML = 'The code you enter is incorrect';
   }
 
 }

@@ -28,11 +28,12 @@ button {
   background-color: #4CAF50; /* Green */
   border: none;
   color: white;
-  padding: 8px 32px;
+  padding: 12px 16px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  border-radius: 15px;
 }
 
 body {
@@ -65,8 +66,14 @@ input[type=text] {
     #primary { width:55%; }
     #secondary { width:30%; margin-left:3%;}  
 }
+
 /* Tabled Portrait */
 @media screen and (max-width: 768px) {
+    #primary { width:80%; }
+    #secondary { width:80%; margin:0; border:none; }
+}
+
+@media screen and (max-width: 480px) {
     #primary { width:80%; }
     #secondary { width:80%; margin:0; border:none; }
 }
