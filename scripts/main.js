@@ -16,6 +16,7 @@ function reset() {
   document.getElementById('begin').disabled = false;
   document.getElementById('step1').style.display = 'none';
   document.getElementById('step2').style.display = 'none';
+  document.getElementById('begin').style.display = 'inline-block';
   loadCheckboxes();
 }
 
@@ -23,14 +24,11 @@ function beginAdventures(button) {
   var step1 = document.getElementById('step1');
   step1.style.display = 'block';
 
-  button.disabled = true;
+  button.style.display = 'none';
 }
 
 function goToStep2() {
   document.getElementById('begin').style.display = 'none';
-
-  var step1 = document.getElementById('step1');
-  step1.style.display = 'none';
 
   var step2 = document.getElementById('step2');
   step2.style.display = 'block';
