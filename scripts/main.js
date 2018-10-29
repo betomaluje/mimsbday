@@ -16,6 +16,7 @@ function reset() {
   document.getElementById('begin').disabled = false;
   document.getElementById('step1').style.display = 'none';
   document.getElementById('step2').style.display = 'none';
+  loadCheckboxes();
 }
 
 function beginAdventures(button) {
@@ -82,8 +83,6 @@ function loadCheckboxes() {
       }
     }
   }
-
-  console.log('checkboxesCount: ', checkboxesCount);
 
   if (checkboxesCount == 5) {
     goToStep2();
