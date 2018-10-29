@@ -11,6 +11,13 @@ function switchImage() {
   }
 }
 
+function reset() {
+  localStorage.clear();
+  document.getElementById('begin').disabled = false;
+  document.getElementById('step1').style.display = 'none';
+  document.getElementById('step2').style.display = 'none';
+}
+
 function beginAdventures(button) {
   var step1 = document.getElementById('step1');
   step1.style.display = 'block';
