@@ -10,23 +10,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="HandheldFriendly" content="true">
   </head>
-  <body>
+  <body onload="loadCheckboxes()">
     <div>
       <h1>You made it!</h1>
       <img id="myImg" onclick="switchImage()" src="images/firefox-icon.png" alt="Happy Birthday!">
 
       <h2>Happy Birthday babe! This is your secret birthday website!</h2>
 
-      <p>Enter the code to reveal the message</p>
-      <table border="0" align="center">
-        <tr>
-          <th><input type="text" id="secretCodeText" hint="Enter secret code"></th>
-          <th><button onclick="validateCode()">Enter code</button></th>
-      </table>
+      <button id="begin" onclick="beginAdventures(this)">Begin Adventures!</button>
 
-      <div id="hiddenMessage" style="display:none">
-        <p id="resultText">Secret message!</p>    
+      <div id="step1" style="display:none">
+        <ul>
+          <li>
+            <input type="checkbox" id="cb1" onchange='handleChange(this);'/>
+            <label class="strikethrough"><b>F</b>lamingo bottle opener</label>
+          </li>
+          <li>
+            <input type="checkbox" id="cb2" onchange='handleChange(this);'/>
+            <label class="strikethrough"><b>L</b>ovika mittens</label>
+          </li>
+          <li>
+            <input type="checkbox" id="cb3" onchange='handleChange(this);'/>
+            <label class="strikethrough"><b>I</b>on shampoo & balsam</label>
+          </li>
+          <li>
+            <input type="checkbox" id="cb4" onchange='handleChange(this);'/>
+            <label class="strikethrough"><b>F</b>ruits</label>
+          </li>
+          <li>
+            <input type="checkbox" id="cb5" onchange='handleChange(this);'/>
+            <label class="strikethrough"><b>O</b>rganic soap & shampoo</label>
+          </li>
+        </ul>
       </div>
+
+      <div id="step2" style="display:none">
+        <p>Enter the code to reveal the message</p>
+        <table border="0" align="center">
+          <tr>
+            <th><input type="text" id="secretCodeText" hint="Enter secret code"></th>
+            <th><button onclick="validateCode()">Enter code</button></th>
+        </table>
+
+        <div id="hiddenMessage" style="display:none">
+          <p id="resultText">Secret message!</p>    
+        </div>
+      </div>
+
     </div>
   </body>
 </html>
