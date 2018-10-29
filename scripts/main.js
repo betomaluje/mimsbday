@@ -81,6 +81,10 @@ function loadCheckboxes() {
           checkbox.checked = false;
         }
       }
+    } else {
+      if (checkbox != null) {
+        checkbox.checked = false;
+      }
     }
   }
 
