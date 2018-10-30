@@ -11,13 +11,31 @@ function switchImage() {
   }
 }
 
+function compareDates() {
+  var today = new Date();
+
+  var mimsBirthdate = new Date('2018-11-24 0:00:00');
+
+  loadCheckboxes();
+
+  toggleInitButton(today >= mimsBirthdate);
+}
+
+function toggleInitButton(visible) {
+  if(visible) {
+    document.getElementById('begin').style.display = 'inline-block';
+  } else {
+    document.getElementById('begin').style.display = 'none';
+  }
+}
+
 function reset() {
   localStorage.clear();
   document.getElementById('begin').disabled = false;
   document.getElementById('step1').style.display = 'none';
   document.getElementById('step2').style.display = 'none';
   document.getElementById('begin').style.display = 'inline-block';
-  loadCheckboxes();
+  compareDates();
 }
 
 function beginAdventures(button) {
@@ -40,7 +58,7 @@ function validateCode() {
   var code = document.getElementById('secretCodeText').value.toLocaleUpperCase();
   var resultText = document.getElementById('resultText');
 
-  var realCode = 'FLIFLIF';
+  var realCode = 'FLIFO26';
 
   if (code !== '' && code === realCode) {
     resultText.style.color = '#4CAF50';
