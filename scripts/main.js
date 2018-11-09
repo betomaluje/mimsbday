@@ -9,18 +9,6 @@ var checkedLabels = [
   '<b>O</b>rganic soap & shampoo'
 ];
 
-// Image switcher code
-function switchImage() {
-  var myImage = document.getElementById('myImg');
-
-  var mySrc = myImage.getAttribute('src');
-  if (mySrc === 'images/firefox-icon.png') {
-      myImage.setAttribute('src', 'images/firefox2.png');
-  } else {
-    myImage.setAttribute('src', 'images/firefox-icon.png');
-  }
-}
-
 function compareDates() {
   var today = new Date();
 

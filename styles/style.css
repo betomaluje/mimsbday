@@ -47,8 +47,8 @@ body {
 #myImg {
   display: block;
   margin: 0 auto;
-  width: 100pt;
-  height: 100pt;
+  width: 120pt;
+  height: 120pt;
 }
 
 input[type=text] {
@@ -64,6 +64,7 @@ input[type=text] {
 #checkboxes label {
   float: left;
 }
+
 #checkboxes ul {
   margin: 0;
   list-style: none;
