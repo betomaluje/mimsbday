@@ -1,5 +1,15 @@
-// Image switcher code
+// Constants
+var normalLabels = ['clue 1', 'clue 2', 'clue 3', 'clue 4', 'clue 5'];
 
+var checkedLabels = [
+  '<b>F</b>lamingo bottle opener', 
+  '<b>L</b>ovika mittens', 
+  '<b>I</b>on shampoo & balsam', 
+  '<b>F</b>ruits', 
+  '<b>O</b>rganic soap & shampoo'
+];
+
+// Image switcher code
 function switchImage() {
   var myImage = document.getElementById('myImg');
 
@@ -102,14 +112,24 @@ function loadCheckboxes() {
         checkbox.checked = false;
       }
     }
+
+    var labelView = document.getElementById('lb' + i);
+
+    if(checkbox.checked) {
+      labelView.innerHTML = checkedLabels[i - 1];
+    } else {
+      labelView.innerHTML = normalLabels[i - 1];
+    }
   }
 
   if (checkboxesCount == 5) {
     goToStep2();
+  } else {
+    document.getElementById('step2').style.display = 'none';
   }
 }
 
-function handleChange(checkbox) {
+function handleChange(checkbox, label) {
   localStorage.setItem(checkbox.id, checkbox.checked);
   loadCheckboxes();
 }
