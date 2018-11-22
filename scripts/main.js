@@ -1,13 +1,15 @@
 // Constants
-var normalLabels = ['clue 1', 'clue 2', 'clue 3', 'clue 4', 'clue 5'];
+var normalLabels = ['The first one is free', 'Is kept by the 4 guardians', 'This is a party girl', 'I\'m sometimes blue, others white', 'You\'ve stared at me every day'];
 
 var checkedLabels = [
-  '<b>F</b>lamingo bottle opener', 
   '<b>L</b>ovika mittens', 
-  '<b>I</b>on shampoo & balsam', 
-  '<b>F</b>ruits', 
-  '<b>O</b>rganic soap & shampoo'
+  '<b>I</b>on shampoo', 
+  '<b>F</b>lamingo bottle opener',
+  '<b>O</b>rganic soap & shampoo',
+  '<b>B</b>eatles notebook'
 ];
+
+var successMessage = "You are AWESOME BABE! You did super good! But there's one more for you.<p>";
 
 function compareDates() {
   var today = new Date();
@@ -48,6 +50,9 @@ function goToStep2() {
 
   var step2 = document.getElementById('step2');
   step2.style.display = 'block';
+
+  // just in case
+  button.style.display = 'none';
 }
 
 function validateCode() {
@@ -56,12 +61,12 @@ function validateCode() {
   var code = document.getElementById('secretCodeText').value.toLocaleUpperCase();
   var resultText = document.getElementById('resultText');
 
-  var realCode = 'FLIFO26';
+  var realCode = 'LIFOB26';
 
   if (code !== '' && code === realCode) {
     resultText.style.color = '#4CAF50';
     resultText.style.fontWeight = 'normal';
-    resultText.innerHTML = 'Nice!';
+    resultText.innerHTML = successMessage;
   } else {
     resultText.style.color = 'red';
     resultText.style.fontWeight = 'bold';
