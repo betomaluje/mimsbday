@@ -59,7 +59,7 @@ function validateCode() {
   var code = document.getElementById('secretCodeText').value.toLocaleUpperCase();
   var resultText = document.getElementById('resultText');
 
-  var realCode = 'LIFOB26';
+  var realCode = 'LIFOB';
 
   if (code !== '' && code === realCode) {
     var step1 = document.getElementById('step1');
