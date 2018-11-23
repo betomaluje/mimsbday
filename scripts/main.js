@@ -9,16 +9,16 @@ var checkedLabels = [
   '<b>B</b>eatles notebook'
 ];
 
-var successMessage = "You are AWESOME BABE! You did super good! But there's one more for you.<p>";
+var successMessage = '<font size="3">You are AWESOME BABE! You did super good! But there\'s one more for you.<p><font size="6">Go an check your small suitcase...';
 
 function compareDates() {
   var today = new Date();
 
   var mimsBirthdate = new Date('2018-11-24 0:00:00');
 
-  loadCheckboxes();
-
   toggleInitButton(today >= mimsBirthdate);
+
+  loadCheckboxes();
 }
 
 function toggleInitButton(visible) {
@@ -46,13 +46,11 @@ function beginAdventures(button) {
 }
 
 function goToStep2() {
-  document.getElementById('begin').style.display = 'none';
-
   var step2 = document.getElementById('step2');
   step2.style.display = 'block';
 
   // just in case
-  button.style.display = 'none';
+  document.getElementById('step1').style.display = 'block';
 }
 
 function validateCode() {
@@ -64,13 +62,22 @@ function validateCode() {
   var realCode = 'LIFOB26';
 
   if (code !== '' && code === realCode) {
+    var step1 = document.getElementById('step1');
+    step1.style.display = 'none';
+
+    var step2 = document.getElementById('step2');
+    step2.style.display = 'none';
+
     resultText.style.color = '#4CAF50';
     resultText.style.fontWeight = 'normal';
     resultText.innerHTML = successMessage;
   } else {
+    var step1 = document.getElementById('step1');
+    step1.style.display = 'block';
+
     resultText.style.color = 'red';
     resultText.style.fontWeight = 'bold';
-    resultText.innerHTML = 'The code you enter is incorrect';
+    resultText.innerHTML = '<font size="3">The code you enter is incorrect';
   }
 }
 
@@ -116,6 +123,7 @@ function loadCheckboxes() {
   }
 
   if (checkboxesCount == 5) {
+    toggleInitButton(false);
     goToStep2();
   } else {
     document.getElementById('step2').style.display = 'none';

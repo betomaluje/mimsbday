@@ -46,6 +46,10 @@
         </ul>
       </div>
 
+      <div id="hiddenMessage" style="display:none">
+        <p id="resultText">Secret message!</p>    
+      </div>
+
       <div id="step2" style="display:none">
         <p>Enter the code to reveal the message</p>
         <table border="0" align="center">
@@ -53,12 +57,7 @@
             <th><input type="text" id="secretCodeText" hint="Enter secret code"></th>
             <th><button onclick="validateCode()">Enter code</button></th>
         </table>
-
-        <div id="hiddenMessage" style="display:none">
-          <p id="resultText">Secret message!</p>    
-        </div>
       </div>
-
     </div>
   </body>
 </html>
