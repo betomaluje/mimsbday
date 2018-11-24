@@ -16,7 +16,7 @@ function compareDates() {
 
   var mimsBirthdate = new Date('2018-11-24 0:00:00');
 
-  toggleInitButton(today >= mimsBirthdate);
+  toggleInitButton(true);
 
   loadCheckboxes();
 }
